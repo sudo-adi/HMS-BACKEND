@@ -1,0 +1,27 @@
+{
+  "firstName": "Sarah",
+  "lastName": "Smith",
+  "name": "Sarah Smith",
+  "email": "sarah.smith@example.com",
+  "phone": "+1234567890",
+  "gender": "female",
+  "dob": "1995-08-20",
+  "height": 165.5,
+  "weight": 60.2,
+  "bloodGroup": "O+",
+  "allergies": ["Penicillin"],
+  "medicalConditions": ["None"],
+  "emergencyContact": {
+    "name": "John Smith",
+    "relationship": "Spouse",
+    "phone": "+1987654321"
+  },
+  "address": {
+    "street": "123 Main St",
+    "city": "Springfield",
+    "state": "IL",
+    "zipCode": "62701",
+    "country": "USA"
+  },
+  "role": "patient"
+}

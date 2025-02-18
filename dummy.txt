@@ -1,0 +1,83 @@
+# HMS Backend API Test Examples
+
+## Base URL: http://localhost:8383
+
+### 1. User Management
+
+# Create Patient
+POST /users
+Payload:
+{
+  "firstName": "Alice",
+  "lastName": "Johnson",
+  "email": "alice@example.com",
+  "password": "securePass123",
+  "role": "patient",
+  "phone": "+1987654321",
+  "dob": "1992-05-15",
+  "gender": "female"
+}
+
+# Create Doctor
+POST /users
+Payload:
+{
+  "firstName": "David",
+  "lastName": "Wilson",
+  "email": "david.wilson@hospital.com",
+  "password": "doctorPass456",
+  "role": "doctor",
+  "phone": "+1123456789",
+  "dob": "1980-03-20",
+  "specialization": "Cardiology",
+  "department": "cardiology",
+  "experience": 15,
+  "education": ["MBBS", "MD", "DM Cardiology"],
+  "startAt": "09:00",
+  "endAt": "17:00",
+  "sessionDuration": 30
+}
+
+# Update User
+PATCH /users/user123
+Payload:
+{
+  "firstName": "Alice",
+  "lastName": "Williams",
+  "phone": "+1987654322"
+}
+
+# Get All Users
+GET /users
+
+### 2. Appointment Management
+
+# Create Appointment
+POST /appointments
+Payload:
+{
+  "userId": "patient123",
+  "doctorId": "doctor456",
+  "dateTime": "2024-02-15T10:30:00.000Z",
+  "type": "consultation",
+  "duration": 30
+}
+
+# Update Appointment
+PATCH /appointments/apt789
+Payload:
+{
+  "dateTime": "2024-02-16T14:00:00.000Z",
+  "status": "rescheduled"
+}
+
+# Get Patient's Appointments
+GET /api/v1/appointments/patient123
+
+# Get Doctor's Appointments
+GET /appointments/doctor456
+
+### 3. Specialist Management
+
+# Get All Specialists
+GET /api/v1/specialists
